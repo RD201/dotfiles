@@ -3,7 +3,8 @@
 
 local lint = require("lint")
 lint.linters_by_ft = {
-	python = { "mypy", "ruff" },
+	-- python = { "mypy", "ruff" },
+	python = { "ruff" },
 	-- python = { "flake8" },
 	dockerfile = { "hadolint" },
 	lua = { "luacheck" },

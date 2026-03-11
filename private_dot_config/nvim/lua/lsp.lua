@@ -138,7 +138,19 @@ vim.lsp.config.lua_ls = {
 }
 vim.lsp.enable("lua_ls")
 
--- Python {{{
+-- Python
+vim.lsp.config.ty = {
+	filetypes = { "python" },
+	cmd = { "ty", "server" },
+	settings = {
+		ty = {
+			-- ty language server settings go here
+			-- just testing default one
+		},
+	},
+}
+vim.lsp.enable("ty")
+--[[
 vim.lsp.config.basedpyright = {
 	name = "basedpyright",
 	filetypes = { "python" },
@@ -183,6 +195,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		end
 	end,
 })
+--]]
 
 -- TSServer
 vim.lsp.config.ts_ls = {
@@ -203,7 +216,7 @@ vim.lsp.config.postgres_lsp = {
 	filetypes = { "sql" },
 	root_markers = { "postgrestools.jsoncs" },
 }
-vim.lsp.enable("postgres_lsp")
+--vim.lsp.enable("postgres_lsp")
 -- TerraformLS
 vim.lsp.config.terraform_ls = {
 	cmd = { "terraform-ls", "serve" },

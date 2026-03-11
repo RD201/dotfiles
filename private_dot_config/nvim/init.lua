@@ -28,6 +28,5 @@ require("formatters")
 require("linting")
 require("git")
 require("wtf")
-require("llm")
 
 -- require("me.whatacoollsp")
